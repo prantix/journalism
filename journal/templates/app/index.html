@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% block title %}The Journal{% endblock %}
+{% block content %}
+    <main>
+        <section id="news">
+            <h2>Recent</h2>
+            <div class="recent">
+                {% for article in articles %}
+                <article>
+                    <a href="{{ article.get_absolute_url }}">
+                        <img src='{{ article.image.url }}' title='{{ article.title }}'>
+                        <span>{{ article.title }}<em> by {{ article.author }} ({{ article.created.date }})</em></span>
+                        <p>{{ article.body|truncatewords:30|linebreaks }}</p>
+                    </a>
+                </article>
+                {% endfor %}
+            </div>
+            <h2>You might have missed</h2>
+            <div class="slide-content">
+                <img class="myslides" src="../../static/images/360_F_334544399_Ntmfbt9DYfB4jA3E5aa9x3ffR5ZioKl1.jpg">
+                <img class="myslides" src="../../static/images/Journalism-MOI-blog-image.jpg">
+                <img class="myslides" src="../../static/images/Most-Influential-Journalists-Today-1.jpg">
+            </div>
+        </section>
+        <section id="contact">
+            <img src="../../static/images/contact_us.jpg">
+            <h2>Contact Us</h2>
+            <div>
+                <p>Having something in mind concerning our services? Please feel free to contact us.</p>
+            </div>
+            <form method="post">
+                {% csrf_token %}
+                {% for field in contact_form %}
+                    {{ field.label_tag }}
+                    {{ field }}
+                {% endfor %}
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        <section id="about">
+            <h1>About Us</h1>
+            <p class="about-para">The ICT-U Journal has always existed and is now proud to present to you its members</p>
+            <div class="left">
+                <img src="../../static/images/no-profile.png">
+                <div>
+                    <h3>John Doe</h3>
+                    <p>CEO</p>
+                    <p>Level 4</p>
+                </div>
+            </div>
+            <div class="right">
+                <img src="../../static/images/no-profile.png">
+                <div>
+                    <h3>John Doe</h3>
+                    <p>CEO</p>
+                    <p>Level 4</p>
+                </div>
+            </div>
+            <div class="left">
+                <img src="../../static/images/no-profile.png">
+                <div>
+                    <h3>John Doe</h3>
+                    <p>CEO</p>
+                    <p>Level 4</p>
+                </div>
+            </div>
+            <div class="right">
+                <img src="../../static/images/no-profile.png">
+                <div>
+                    <h3>John Doe</h3>
+                    <p>CEO</p>
+                    <p>Level 4</p>
+                </div>
+            </div>
+            <div class="left">
+                <img src="../../static/images/no-profile.png">
+                <div>
+                    <h3>John Doe</h3>
+                    <p>CEO</p>
+                    <p>Level 4</p>
+                </div>
+            </div>
+            <div class="right">
+                <img src="../../static/images/no-profile.png">
+                <div>
+                    <h3>John Doe</h3>
+                    <p>CEO</p>
+                    <p>Level 4</p>
+                </div>
+            </div>
+            <hr>
+        </section>
+    </main>
+{% endblock %}

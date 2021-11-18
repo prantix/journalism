@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+        <meta name="author" content="Chuye Brian">
+        <meta name="description" content="This is a simple site to learn how to create nice navbars.">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+        <script src="{% static 'script/main.js' %}" defer></script>
+    </head>
+    <body>
+        <nav>
+            <img src="../static/images/Journalism-MOI-blog-image.jpg">
+            <h1>The Journal</h1>
+            <div class="dropdown">
+                <i class="material-icons">reorder</i>
+                <ul class="dropdown-content">
+                    <li>
+                        <a href="#news">News</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#about">Engage</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        {% block content %}
+        {% endblock %}
+        <footer>
+            <div class="footer-info">
+                <h2>The Journal</h2>
+                <div>
+                    <h3>Heading 1</h3>
+                    <p>Lorem ipsum</p>
+                    <p>Lorem ipsum</p>
+                    <p>Lorem ipsum</p>
+                </div>
+                <div>
+                    <h3>Get in touch</h3>
+                    <p>Twitter</p>
+                    <p>Facebook</p>
+                    <p>Instagram</p>
+                    <p>Phone: ?????????</p>
+                </div>
+            </div>
+            <em>&copy;2021 The Journal Limited. All rights reserved.</em>
+        </footer>
+    </body>
+</html>

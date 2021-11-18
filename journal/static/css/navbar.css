@@ -1,0 +1,298 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+}
+nav {
+    position: relative;
+    margin-bottom: 70px;
+    padding: 50px 70px 350px; /* alter for mobile */
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+}
+nav img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+nav h1, nav div, nav div ul, nav div ul li {
+    display: inline-block;
+}
+nav h1 {
+    margin-right: 45%; /* alter on mobile (aom) */
+    padding-left: 30px; /* aom */
+}
+nav div .material-icons {
+    display: none;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    border-right: 1px solid #bbb;
+}
+nav ul li:last-child {
+    border-right: none;
+}
+nav ul li a {
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+
+#news, #contact, #about {
+    padding: 20px 50px;
+}
+#news h2 {
+    margin-bottom: 40px;
+    text-align: center;
+}
+#news div {
+    margin-bottom: 100px;
+}
+#news .recent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* aom */
+    gap: 30px; /* aom */
+}
+img {
+    display: block;
+    width: 100%;
+    height: 60%;
+    margin-bottom: 10px;
+}
+#news div article {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
+}
+#news div article:hover {
+    box-shadow: 0 8px 16px 0 rgb(64, 64, 228);
+}
+#news div article a {
+    text-decoration: none;
+    color: #333;
+}
+#news span, #news p {
+    padding: 0 15px;
+    text-align: left;
+}
+#news span {
+    text-decoration: underline;
+}
+#news .slide-content {
+    display: static;
+    box-shadow: 0 8px 16px 0 rgb(64, 64, 228);
+}
+#news .slide-content  img {
+    height: 512px;
+}
+
+
+
+#contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* aom */
+    gap: 40px; /* aom */
+    position: relative;
+    background-color:rgba(64, 64, 228,0.4);
+    padding-bottom: 60px;
+}
+#contact img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+#contact h2 {
+    color: #fff;
+    grid-column: 1/3;
+    font-weight: bold;
+    text-align: center;
+    padding: 25px 0
+}
+#contact div {
+    width: 75%;
+}
+#contact div p {
+    padding: 10px;
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.8;
+}
+#contact form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 20px;
+    color: #fff;
+    box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+}
+#contact form textarea {
+    padding: 10px;
+    border-radius: 4px;
+}
+
+
+
+#about {
+    color: rgb(33, 33, 163);
+}
+#about .about-para, #about h1 {
+    text-align: center;
+    margin: 50px 0 80px;
+}
+.left, .right {
+    margin: 0 40px 40px;
+}
+.left img, .right img { /* aom */
+    width: 15%;
+    border-radius: 50%;
+    margin: 0 20px;
+}
+.left img{ /* aom */
+    float: left;
+}
+.right img { /* aom */
+    float: right;
+}
+.left {
+}
+.right {
+    text-align: right; /* aom */
+    clear: left; /* aom */
+}
+.left div, .right div {
+    padding: 30px 0;
+}
+hr
+{
+    border-style: none;
+    border-top-style: dotted;
+    border-width: 5px;
+    border-color: rgb(33, 33, 163);
+    width: 5%;
+    margin: 40px auto;
+}
+
+
+footer {
+    padding: 40px 30px;
+    background-color:rgba(33, 33, 228, 0.7);
+    color: #fff;
+    clear: both;/* aom */
+    border-style: none;
+    border-top: thick dotted white;
+}
+.footer-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* aom */
+    gap: 25px;
+    margin-bottom: 80px;
+}
+.footer-info h3 {
+    margin-bottom: 45px;
+}
+footer em {
+    font-size: 0.8em;
+}
+
+
+
+
+/* media query */
+@media screen and (max-width: 960px) {
+    nav {
+        padding: 90px 20px;
+    }
+    nav h1 {
+        margin-right: 42%;
+        padding-left: 12px;
+        text-align: left;
+    }
+    nav div {
+        position: relative;
+        cursor: pointer;
+    }
+    nav div .material-icons {
+        display: inline-block;
+    }
+    nav div ul {
+        display: none;
+        position: absolute;
+        right: 10px;
+        min-width: 120px;
+        border-radius: 8px;
+        background-color: whitesmoke;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    nav div ul li {
+        display: block;
+        padding: 20px;
+        border: none;
+    }
+    nav div ul li a {
+        color: black;
+    }
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    #news, #contact, #about {
+        padding: 0 10px;
+    }
+
+
+    #news .recent {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); /* aom */
+        gap: 30px; /* aom */
+    }
+
+
+    #contact {
+        grid-template-columns: repeat(1, 1fr); /* aom */
+        gap: 10px; /* aom */
+        padding-bottom: 60px;
+    }
+    #contact div {
+        width: 100%;
+    }
+    #contact h2 {
+        grid-column: 1/2;
+    }
+    #contact form {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #contact form input {
+        height: 30px;
+        padding: 7px;
+    }
+    #contact form button {
+        padding: 10px;
+    }
+    #contact form textarea {
+        padding: 10px;
+        border-radius: 4px;
+    }
+
+
+    .footer-info {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); /* aom */
+        gap: 25px;
+        margin-bottom: 80px;
+    }
+}
